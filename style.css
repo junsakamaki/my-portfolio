@@ -47,7 +47,7 @@ body {
 }
 @keyframes typing {
   to {
-    width: 19ch;
+    width: 48vw;
   }
 }
 @keyframes caret {
@@ -188,4 +188,5 @@ li span {
   background-color: black;
   text-align: center;
   line-height: 5vw;
+  font-size: 1vw;
 }
