@@ -36,23 +36,20 @@ body {
 
 .title {
   font-size: 4vw;
-  width: 0ch;
   font-family: "Josefin Sans", sans-serif;
   overflow: hidden;
   color: #d5bda9;
   white-space: nowrap;
   border-right: solid transparent;
-  animation: typing 2s 1s steps(19) forwards,
-    caret 0.4s step-end infinite alternate;
 }
-@keyframes typing {
-  to {
-    width: 48vw;
-  }
+
+.title::after {
+  content: "|";
+  animation: caret 0.8s ease infinite;
 }
 @keyframes caret {
   50% {
-    border-right-color: currentColor;
+    opacity: 0;
   }
 }
 
@@ -138,17 +135,22 @@ body {
   font-size: 6vw;
 }
 .profile ul {
-  padding: 1vw 5vw;
   text-align: center;
+  display: table;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0.5vw 0.5vw;
 }
 .profile li {
-  display: inline-block;
-  padding: 5vw;
+  display: table-cell;
+  vertical-align: middle;
+  width: 25vw;
+  height: 15vw;
   margin: 0.5vw 0.5vw;
   font-size: 2vw;
 }
 li span {
-  font-size: 4vw;
+  font-size: 3vw;
 }
 .li1 {
   background-color: #d5a9a9;
