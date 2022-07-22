@@ -1,4 +1,5 @@
 /* フォントをインポート */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 li {
   list-style: none;
@@ -7,6 +8,52 @@ li {
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+/* 起動画面 */
+.opening {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: opening 1s ease-out 5s forwards;
+}
+@keyframes opening {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.title {
+  width: 0ch;
+  font-family: "Josefin Sans", sans-serif;
+  overflow: hidden;
+  color: #d5bda9;
+  white-space: nowrap;
+  border-right: solid transparent;
+  animation: typing 2s 1s steps(19) forwards,
+    caret 0.4s step-end infinite alternate;
+}
+@keyframes typing {
+  to {
+    width: 19ch;
+  }
+}
+@keyframes caret {
+  50% {
+    border-right-color: currentColor;
+  }
+}
+
 /* ヘッダー */
 .header {
   z-index: 2;
@@ -60,7 +107,13 @@ body {
   0% {
     opacity: 0;
   }
+  25% {
+    opacity: 1;
+  }
   50% {
+    opacity: 1;
+  }
+  75% {
     opacity: 1;
   }
   100% {
@@ -71,11 +124,11 @@ body {
   width: 60%;
 }
 
-h1 {
+.profile h1 {
   padding-left: 3vw;
   font-size: 4vw;
   border-bottom: solid 0.5vw;
 }
-h1 span {
+.profile h1 span {
   font-size: 6vw;
 }

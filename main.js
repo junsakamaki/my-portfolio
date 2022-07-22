@@ -1,6 +1,6 @@
+/* 写真表示切り替え */
 const pictures = document.getElementById("pictures");
 const pic = ["Jun1.jpg", "Jun2.jpg", "Jun3.jpg", "Jun4.jpg"];
-
 const img_element = document.createElement("img");
 
 let i = 0;
